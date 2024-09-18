@@ -1,7 +1,6 @@
 package algorithms
 
 import (
-	"fmt"
 	"github.com/algoritmos-2025-1/Graficas/internal/collection"
 	"github.com/algoritmos-2025-1/Graficas/pkg/graph"
 )
@@ -12,8 +11,6 @@ func GraphSearch(G *graph.StaticGraph, r int, C collection.Collection[int]) (*[]
 	for i, _ := range p {
 		p[i] = -1
 	}
-	fmt.Println(G.Order())
-
 	t := make([]int, G.Order())
 	colors := make([]bool, G.Order())
 	i := 0	

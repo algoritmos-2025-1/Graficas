@@ -24,6 +24,6 @@ func main() {
 	}
 	//Creamos una gráfica a partir de la matriz
 	g,_ := graph.NewGraphFromMatrix(matrizAdy)
-	K,S := algorithms.getEscin(g)
+	K,S,_ := algorithms.GetKS(g)
 	fmt.Println(K,S)
 }

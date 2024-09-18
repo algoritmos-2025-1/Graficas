@@ -1,11 +1,11 @@
 package algorithms
+
 import (
 	"sort"
+	//"github.com/algoritmos-2025-1/Graficas/internal/collection"
 	"github.com/algoritmos-2025-1/Graficas/pkg/graph"
-	 //"github.com/algoritmos-2025-1/Graficas/internal/collection"
-	 //"github.com/algoritmos-2025-1/Graficas/internal/stack"
-	 //"github.com/algoritmos-2025-1/Graficas/pkg/algorithms"
 )
+
 type Pair struct {
     Value int
     Index int
@@ -18,7 +18,7 @@ func (a ByValue) Len() int           { return len(a) }
 func (a ByValue) Swap(i, j int)      { a[i], a[j] = a[j], a[i] }
 func (a ByValue) Less(i, j int) bool { return a[i].Value > a[j].Value }
 
-func getEscin(g *graph.StaticGraph)([]int, []int, string){
+func GetKS(g *graph.StaticGraph)([]int, []int, string){
 	//Obtenemos una sucesión de dgrados de la gráfica
 	grados := g.DegreeSequence()
 	//Para poder ordenar los grados en forma descendiente guardamos el indice para saber cuál era originalmente
