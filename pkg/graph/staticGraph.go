@@ -1,8 +1,8 @@
 package graph
 
 import (
-	"github.com/ciencias-graph-theory/graph-theory-tools/internal/set"
-	"github.com/ciencias-graph-theory/graph-theory-tools/internal/sliceutils"
+	"github.com/algoritmos-2025-1/Graficas/internal/set"
+	"github.com/algoritmos-2025-1/Graficas/internal/sliceutils"
 )
 
 // A StaticGraph represents an undirected graph, modelled by its adjacency
