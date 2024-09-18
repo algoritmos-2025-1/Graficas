@@ -1,7 +1,7 @@
 package graph
 
 import (
-	"github.com/ciencias-graph-theory/graph-theory-tools/internal/sliceutils"
+	"github.com/algoritmos-2025-1/Graficas/internal/sliceutils"
 )
 
 // A MatrixDigraph represents a digraph modelled by its adjacency

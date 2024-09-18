@@ -1,7 +1,7 @@
 package generators
 
 import (
-	"github.com/ciencias-graph-theory/graph-theory-tools/internal/sliceutils"
+	"github.com/algoritmos-2025-1/Graficas/internal/sliceutils"
 )
 
 // IsClique receives a graph and a collection (subset) of vertices of the graph,

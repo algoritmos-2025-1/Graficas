@@ -8,7 +8,7 @@ import (
 	"math"
 	"strconv"
 
-	"github.com/ciencias-graph-theory/graph-theory-tools/internal/set"
+	"github.com/algoritmos-2025-1/Graficas/internal/set"
 )
 
 // This function checks whether two int slices are equal.

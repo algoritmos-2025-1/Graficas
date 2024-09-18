@@ -3,7 +3,7 @@
 package graph
 
 import (
-	"github.com/ciencias-graph-theory/graph-theory-tools/internal/set"
+	"github.com/algoritmos-2025-1/Graficas/internal/set"
 )
 
 // Type aliases to improve code readability.
@@ -27,6 +27,6 @@ type Graph interface {
 	// Matrix returns the adjacency list of the graph.
 	List() (AdjacencyList, error)
 
-	// NeighboursSet returns a set of the neighbours to a given vertex in the graph.
-	NeighboursSet(v int) *set.IntSet
+	// Regresa la lista de vecions de un vértice
+	Neighbours(v int) *[]int
 }

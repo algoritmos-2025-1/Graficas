@@ -19,25 +19,6 @@ type StaticGraph struct {
 	degreeSequence []int
 }
 
-// Crea una gráfica por listas de adyacencias
-func CreateAdjacencyListGraph(n int) Graph {
-	adjacencyList := make([][]int, n)
-	for i := range adjacencyList {
-		adjacencyList[i] = make([]int, 0)
-	}
-	return &StaticGraph{
-		matrix:         nil,
-		list:           adjacencyList
-		degreeSequence: nil,
-	}, nil
-}
-
-// Añade una arista
-func (g *StaticGraph) AddEdge(u, v int) {
-	g.list[u] = append(g.list[u], v)
-	g.list[v] = append(g.list[v], u)
-}
-
 // NewGraphFromMatrix initializes a graph modelled by its adjacency matrix. This
 // method checks whether the matrix received as argument is symmetric; if it is
 // not symmetric, it throws an error.
@@ -220,6 +201,23 @@ func (g *StaticGraph) NeighboursSet(v int) *set.IntSet {
 	} else if g.list != nil {
 		for _, n := range g.list[v] {
 			s.Add(n)
+		}
+	}
+	return s
+}
+
+// Neighbours returns a set of the neighbours to a given vertex in the graph.
+func (g *StaticGraph) NeighboursList(v int) []int {
+	var s []int
+	if g.matrix != nil {
+		for n := 0; n < len(g.matrix); n++ {
+			if g.matrix[v][n] != 0 {
+				s = append(s,n)
+			}
+		}
+	} else if g.list != nil {
+		for _, n := range g.list[v] {
+			s = append(s,n)
 		}
 	}
 	return s
